@@ -4,6 +4,7 @@ Discount Markdown Processor for Ruby
 This is a very slightly patched version of the official [RDiscount](http://github.com/rtomayko/rdiscount/) 1.6.8.
 
 The patches include:
+
 - enable DIV_QUOTE support, so now you can use markdown inside a classed blockquote or div with the following syntax:
 
     > %special%
