@@ -20,4 +20,6 @@
 #define INITRNG(x) srand((unsigned int)x)
 #endif
 
+#define DIV_QUOTE 1
+
 #endif/* __MARKDOWN_D */
