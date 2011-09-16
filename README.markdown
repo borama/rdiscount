@@ -1,6 +1,33 @@
 Discount Markdown Processor for Ruby
 ====================================
 
+This is a very slightly patched version of the official [RDiscount](http://github.com/rtomayko/rdiscount/) 1.6.8.
+
+The patches include:
+- enable DIV_QUOTE support, so now you can use markdown inside a classed blockquote or div with the following syntax:
+
+    > %special%
+    > ###as you see,
+    > - markdown works nicely inside this special div
+
+  This produces the following markup:
+
+    <div class="special"><h3>as you see,</h3> 
+      <ul> 
+      <li>markdown works nicely inside this special div</li> 
+      </ul> 
+    </div>
+
+  Instead of class you can also use an ID, using this syntax:
+
+    > %id:special%
+
+- another patch is added so that it compiles nicely (prevents the ['no int of size 4' error](https://github.com/rtomayko/rdiscount/issues/48))
+
+
+ORIGINAL README
+---------------
+
 Discount is an implementation of John Gruber's Markdown markup language in C. It
 implements all of the language described in [the markdown syntax document][1] and
 passes the [Markdown 1.0 test suite][2].
